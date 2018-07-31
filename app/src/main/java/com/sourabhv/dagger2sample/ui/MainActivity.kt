@@ -1,6 +1,5 @@
 package com.sourabhv.dagger2sample.ui
 
-import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -11,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.sourabhv.dagger2sample.R
 import com.sourabhv.dagger2sample.ui.foobar.FooActivity
+import com.sourabhv.dagger2sample.ui.simple.SimpleActivity
+import com.sourabhv.dagger2sample.utils.show
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.li_main.view.*
 
@@ -23,9 +24,6 @@ class MainActivity : AppCompatActivity() {
         Simple("Simple¬", """
             |¬ Using dagger.android
             |¬ Creating SubComponents automatically using @ContributesAndroidInjection
-        """.trimMargin()),
-        SubModules("SubModules¬", """
-            |¬
         """.trimMargin()),
         SubComponents("SubComponents and Modules¬", """
             |¬ Showcases usage of modules in sub-components to inject dependencies between Activity and Fragment
@@ -76,9 +74,8 @@ class MainActivity : AppCompatActivity() {
             init {
                 itemView.setOnClickListener {
                     when(options[adapterPosition]) {
-                        MainActivity.Option.Foo -> startActivity(Intent(this@MainActivity, FooActivity::class.java))
-                        MainActivity.Option.Simple -> Unit
-                        MainActivity.Option.SubModules -> Unit
+                        MainActivity.Option.Foo -> show(FooActivity::class)
+                        MainActivity.Option.Simple -> show(SimpleActivity::class)
                         MainActivity.Option.SubComponents -> Unit
                         MainActivity.Option.CustomScope -> Unit
                         MainActivity.Option.MultiBindings -> Unit

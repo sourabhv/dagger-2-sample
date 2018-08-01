@@ -18,11 +18,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.foobar.FooActivity"/>
+        <activity android:name=".ui.foobar.FooActivity" />
 
         <activity android:name=".ui.simple.SimpleActivity" />
 
         <activity android:name=".ui.subcomponents.MakePlanetActivity" />
+
+        <activity android:name=".ui.multibindings.HitListActivity" />
     </application>
 
 </manifest>

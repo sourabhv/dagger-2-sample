@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.sourabhv.dagger2sample.R
 import com.sourabhv.dagger2sample.ui.foobar.FooActivity
+import com.sourabhv.dagger2sample.ui.multibindings.HitListActivity
 import com.sourabhv.dagger2sample.ui.simple.SimpleActivity
 import com.sourabhv.dagger2sample.ui.subcomponents.MakePlanetActivity
 import com.sourabhv.dagger2sample.utils.show
@@ -34,14 +35,14 @@ class MainActivity : AppCompatActivity() {
             |¬ Showcases how multi-bindings work and how they are useful and it's limitations
             |¬ This includes @IntoMap, @IntoSet, support for Guava's Immutable Map/Set, and Kotlin
         """.trimMargin()),
-        CustomScope("TBD :: Custom Scope¬", """
-            |¬ Showcases custom scopes and how custom scope lifecycle is defined/controlled
-            |¬ This can be group of activities, a particular flow, something else
-        """.trimMargin()),
-        Gotchas("TBD :: Gotchas¬", """
-            |¬ Dagger lifesavers
-            |¬ Things that can start a War.
-        """.trimMargin()),
+//        CustomScope("TBD :: Custom Scope¬", """
+//            |¬ Showcases custom scopes and how custom scope lifecycle is defined/controlled
+//            |¬ This can be group of activities, a particular flow, something else
+//        """.trimMargin()),
+//        Gotchas("TBD :: Gotchas¬", """
+//            |¬ Dagger lifesavers
+//            |¬ Things that can start a War.
+//        """.trimMargin()),
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,9 +80,9 @@ class MainActivity : AppCompatActivity() {
                         MainActivity.Option.Foo -> show(FooActivity::class)
                         MainActivity.Option.Simple -> show(SimpleActivity::class)
                         MainActivity.Option.SubComponents -> show(MakePlanetActivity::class)
-                        MainActivity.Option.MultiBindings -> Unit
-                        MainActivity.Option.CustomScope -> Unit
-                        MainActivity.Option.Gotchas -> Unit
+                        MainActivity.Option.MultiBindings -> show(HitListActivity::class)
+//                        MainActivity.Option.CustomScope -> Unit
+//                        MainActivity.Option.Gotchas -> Unit
                     }
                 }
             }

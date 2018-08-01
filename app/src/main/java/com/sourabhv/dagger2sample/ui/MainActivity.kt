@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.sourabhv.dagger2sample.R
 import com.sourabhv.dagger2sample.ui.foobar.FooActivity
 import com.sourabhv.dagger2sample.ui.simple.SimpleActivity
+import com.sourabhv.dagger2sample.ui.subcomponents.MakePlanetActivity
 import com.sourabhv.dagger2sample.utils.show
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.li_main.view.*
@@ -37,8 +38,9 @@ class MainActivity : AppCompatActivity() {
             |¬ Showcases custom scopes and how custom scope lifecycle is defined/controlled
             |¬ This can be group of activities, a particular flow, something else
         """.trimMargin()),
-        Goodies("Other awesome stuff¬", """
-            |¬ Dagger lifesavers that people will thank you for.
+        Gotchas("TBD :: Gotchas¬", """
+            |¬ Dagger lifesavers
+            |¬ Things that can start a War.
         """.trimMargin()),
     }
 
@@ -76,10 +78,10 @@ class MainActivity : AppCompatActivity() {
                     when(options[adapterPosition]) {
                         MainActivity.Option.Foo -> show(FooActivity::class)
                         MainActivity.Option.Simple -> show(SimpleActivity::class)
-                        MainActivity.Option.SubComponents -> Unit
-                        MainActivity.Option.CustomScope -> Unit
+                        MainActivity.Option.SubComponents -> show(MakePlanetActivity::class)
                         MainActivity.Option.MultiBindings -> Unit
-                        MainActivity.Option.Goodies -> Unit
+                        MainActivity.Option.CustomScope -> Unit
+                        MainActivity.Option.Gotchas -> Unit
                     }
                 }
             }

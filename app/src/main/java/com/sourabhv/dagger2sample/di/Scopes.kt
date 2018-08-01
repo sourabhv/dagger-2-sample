@@ -1,11 +1,12 @@
 package com.sourabhv.dagger2sample.di
 
+import javax.inject.Named
 import javax.inject.Scope
 
 @MustBeDocumented
 @Scope
 @Retention
-annotation class ActivityScope
+annotation class ActivityScoped
 
 @MustBeDocumented
 @Scope
@@ -15,14 +16,7 @@ annotation class ActivityScope
         AnnotationTarget.FUNCTION,
         AnnotationTarget.PROPERTY_GETTER,
         AnnotationTarget.PROPERTY_SETTER)
-annotation class FragmentScope
+annotation class FragmentScoped
 
-@MustBeDocumented
-@Scope
-@Retention
-@Target(AnnotationTarget.CLASS,
-        AnnotationTarget.FILE,
-        AnnotationTarget.FUNCTION,
-        AnnotationTarget.PROPERTY_GETTER,
-        AnnotationTarget.PROPERTY_SETTER)
-annotation class SubFragmentScope
+@Named("make_planet_card_id")
+annotation class CartID

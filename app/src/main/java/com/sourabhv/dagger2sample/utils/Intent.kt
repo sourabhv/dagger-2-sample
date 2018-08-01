@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.Fragment
+import java.util.*
 import kotlin.reflect.KClass
 
 
@@ -18,3 +19,5 @@ fun Fragment.show(activityClass: KClass<out Activity>) {
 fun Context.show(activityClass: KClass<out Activity>) {
     startActivity(Intent(this, activityClass.java))
 }
+
+fun randomUUID() = UUID.randomUUID().toString()

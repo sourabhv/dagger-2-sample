@@ -21,6 +21,8 @@
         <activity android:name=".ui.foobar.FooActivity"/>
 
         <activity android:name=".ui.simple.SimpleActivity" />
+
+        <activity android:name=".ui.subcomponents.MakePlanetActivity" />
     </application>
 
 </manifest>

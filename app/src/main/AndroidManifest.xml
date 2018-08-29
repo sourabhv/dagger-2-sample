@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sourabhv.dagger2sample">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".Needle"
         android:allowBackup="true"
@@ -24,7 +26,12 @@
 
         <activity android:name=".ui.subcomponents.MakePlanetActivity" />
 
-        <activity android:name=".ui.multibindings.HitListActivity" />
+        <activity android:name=".ui.multibindings.LanguagesActivity" />
+
+        <activity android:name=".ui.customscope.chatlist.ChatListActivity" />
+
+        <activity android:name=".ui.customscope.chatdetail.ChatDetailActivity" />
+
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.sourabhv.dagger2sample.di
 
 import android.app.Application
 import com.sourabhv.dagger2sample.Needle
+import com.sourabhv.dagger2sample.ui.customscope.ChatComponent
 import com.sourabhv.dagger2sample.ui.foobar.FooModule
 import dagger.BindsInstance
 import dagger.Component
@@ -19,9 +20,11 @@ import dagger.android.support.DaggerApplication
 ])
 interface AppComponent: AndroidInjector<DaggerApplication> {
 
-    fun inject(needle: Needle)
-
     override fun inject(instance: DaggerApplication)
+
+    fun chatComponent(): ChatComponent.Builder
+
+    fun inject(needle: Needle)
 
     @Component.Builder
     interface Builder {

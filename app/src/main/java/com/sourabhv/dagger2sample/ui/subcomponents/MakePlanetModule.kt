@@ -12,10 +12,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class MakePlanetModule {
 
     @FragmentScoped
-    @ContributesAndroidInjector(modules = [
-        // Modules for fragment
-        // Dependencies will be loaded in @FragmentScoped
-        ])
+    @ContributesAndroidInjector()
     abstract fun makePlanetFragment(): MakePlanetFragment
 
     @Module

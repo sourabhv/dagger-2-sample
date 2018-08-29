@@ -1,7 +1,7 @@
 package com.sourabhv.dagger2sample.di
 
-import com.sourabhv.dagger2sample.ui.multibindings.HitListActivity
 import com.sourabhv.dagger2sample.ui.multibindings.HitListModule
+import com.sourabhv.dagger2sample.ui.multibindings.LanguagesActivity
 import com.sourabhv.dagger2sample.ui.simple.SimpleActivity
 import com.sourabhv.dagger2sample.ui.subcomponents.MakePlanetActivity
 import com.sourabhv.dagger2sample.ui.subcomponents.MakePlanetModule
@@ -20,7 +20,7 @@ abstract class ActivityBindingModule {
 
     @ActivityScoped
     @ContributesAndroidInjector(modules = [HitListModule::class])
-    abstract fun hitListActivity(): HitListActivity
+    abstract fun languageActivity(): LanguagesActivity
 
 }
 

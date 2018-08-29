@@ -6,6 +6,6 @@ class MagicProvider @Inject constructor() {
 
     fun getTheMagicWord() = "Dagger2!\n\nIt Lives!!!"
 
-    fun getUserName() = "Mr. Stark"
+    fun getUserName() = "Pretty simple, isn't it?"
 
 }

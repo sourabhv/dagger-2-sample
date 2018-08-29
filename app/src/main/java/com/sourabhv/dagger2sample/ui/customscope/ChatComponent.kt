@@ -25,7 +25,6 @@ interface ChatComponent {
 
 }
 
-
 @Module
 abstract class ChatBindingModule {
     @ActivityScoped

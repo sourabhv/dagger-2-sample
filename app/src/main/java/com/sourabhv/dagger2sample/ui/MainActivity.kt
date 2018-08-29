@@ -10,8 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.sourabhv.dagger2sample.R
 import com.sourabhv.dagger2sample.ui.customscope.chatlist.ChatListActivity
-import com.sourabhv.dagger2sample.ui.foobar.FooActivity
 import com.sourabhv.dagger2sample.ui.multibindings.LanguagesActivity
+import com.sourabhv.dagger2sample.ui.naive.NaiveActivity
 import com.sourabhv.dagger2sample.ui.simple.SimpleActivity
 import com.sourabhv.dagger2sample.ui.subcomponents.MakePlanetActivity
 import com.sourabhv.dagger2sample.utils.show
@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.li_main.view.*
 class MainActivity : AppCompatActivity() {
 
     enum class Option(val title: String, val desc: String) {
-        Foo("Naive 🗡", """
+        Naive("Naive 🗡", """
             |¬ A simple preface of dagger2.10+
         """.trimMargin()),
         Simple("Simple 🗡", """
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             init {
                 itemView.setOnClickListener {
                     when(options[adapterPosition]) {
-                        MainActivity.Option.Foo -> show(FooActivity::class)
+                        MainActivity.Option.Naive -> show(NaiveActivity::class)
                         MainActivity.Option.Simple -> show(SimpleActivity::class)
                         MainActivity.Option.SubComponents -> show(MakePlanetActivity::class)
                         MainActivity.Option.MultiBindings -> show(LanguagesActivity::class)

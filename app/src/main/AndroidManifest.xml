@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.foobar.FooActivity" />
+        <activity android:name=".ui.naive.NaiveActivity" />
 
         <activity android:name=".ui.simple.SimpleActivity" />
 

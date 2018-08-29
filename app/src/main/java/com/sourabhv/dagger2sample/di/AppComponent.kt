@@ -3,7 +3,7 @@ package com.sourabhv.dagger2sample.di
 import android.app.Application
 import com.sourabhv.dagger2sample.Needle
 import com.sourabhv.dagger2sample.ui.customscope.ChatComponent
-import com.sourabhv.dagger2sample.ui.foobar.FooModule
+import com.sourabhv.dagger2sample.ui.naive.NaiveModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -16,7 +16,7 @@ import dagger.android.support.DaggerApplication
     AndroidSupportInjectionModule::class,
     AppModule::class,
     ActivityBindingModule::class,
-    FooModule::class
+    NaiveModule::class
 ])
 interface AppComponent: AndroidInjector<DaggerApplication> {
 
